@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "Configing.h"
+#import "weChat_SDK_V1.6.2/WXApi.h"
+#import "WechatPay.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +19,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [WXApi registerApp:@"wx7d09cdaa382814f1" withDescription:@"weChatDemo"];
     return YES;
 }
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
